@@ -1,5 +1,9 @@
 <%= simple_form_for @message do |f|%>
-<%=f.input :title, label: "Message Title"%>
-<%=f.input :description%>
+
+
+<%=f.input :title, label: "Message Title", required: true, placeholder: "Enter Title Here"%>
+<%=f.input :description, required: true, placeholder: "Enter Description Here"%>
 <%=f.submit :submit, label: "Create Message"%>
+<br/>
+<%= link_to "Back", root_path%>
 <%end%>
